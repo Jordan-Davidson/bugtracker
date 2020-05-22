@@ -1,0 +1,16 @@
+<h1>{{data.title}}</h1>
+<h2>{{data.status}}</h2>
+<p>{{data.time}}</p>
+<p>{{data.description}}</p>
+<p>created by: <a href = '/user/{{data.submitted_by.id}}'>{{data.submitted_by}}</a></p>
+<p>assigned to: {{data.assigned_user}}</p>
+<p>completed by: {{data.completed_by}}</p>
+
+
+<a href = '/assign/{{data.id}}/{{user.id}}/'>assign yourself</a>
+<a href = '/complete/{{data.id}}/{{user.id}}/'>complete ticket</a>
+<a href = '/invalid/{{data.id}}/'>invalidate ticket</a>
+<a href = '/edit/{{data.id}}/'>edit ticket</a>
+<div>
+    <a href = '/'>go home</a>
+</div>

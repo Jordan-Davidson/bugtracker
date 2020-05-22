@@ -1,0 +1,40 @@
+<a href = '/'> go home</a>
+<h1>{{data}}</h1>
+
+<div style='display:flex;
+flex-direction: row;
+justify-content: space-around;'>
+<div style='
+border: 1px black solid;
+width: 20%;
+text-align: center;'>
+<h2>created tickets</h2>
+{%for ticket in createdTickets%}
+<h3><a href = '/ticket/{{ticket.id}}'>{{ticket.title}}</a></h3>
+<p>{{ticket.description}}</p>
+<p>{{ticket.time}}</p>
+{%endfor%}
+</div>
+<div style='
+border: 1px black solid;
+width: 20%;
+text-align: center;'>
+<h2>assigned tickets</h2>
+{%for ticket in assignedTickets%}
+<h3><a href = '/ticket/{{ticket.id}}'>{{ticket.title}}</a></h3>
+<p>{{ticket.description}}</p>
+<p>{{ticket.time}}</p>
+{%endfor%}
+</div>
+<div style='
+border: 1px black solid;
+width: 20%;
+text-align: center;'>
+<h2>completed tickets</h2>
+{%for ticket in completedTickets%}
+<h3><a href = '/ticket/{{ticket.id}}'>{{ticket.title}}</a></h3>
+<p>{{ticket.description}}</p>
+<p>{{ticket.time}}</p>
+{%endfor%}
+</div>
+</div>
